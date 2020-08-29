@@ -32,7 +32,7 @@ def run():
     submit_wait = WebDriverWait(driver, 30)
     submit_wait.until(element_to_be_clickable((By.ID, 'submit-temp-btn'))).click()
 
-
+    driver.quit()
 
 if __name__ == '__main__':
     run()
