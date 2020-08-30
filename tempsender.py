@@ -27,7 +27,7 @@ def run():
     for i, digit in enumerate(randomTemp):
         driver.find_element_by_id('td'+str(i + 1)).send_keys(int(digit))
 
-    driver.find_element(By.CLASS_NAME, 'btn btn-warning').click()
+    driver.find_element_by_xpath('//*[@id="submit-temperature-container"]/button').click()
 
     submit_wait = WebDriverWait(driver, 30)
     submit_wait.until(element_to_be_clickable((By.ID, 'submit-temp-btn'))).click()
